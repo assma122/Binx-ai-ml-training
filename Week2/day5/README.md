@@ -2,15 +2,14 @@
 
 ## Objective
 
-The goal of Day 5 is to perform advanced exploratory data analysis on the insurance dataset and combine all EDA steps into one complete notebook.
+Perform exploratory data analysis on the insurance dataset and combine all EDA steps into one complete notebook.
 
 ## Dataset
 
-- insurance copy.csv
+- insurance.csv
 
-## Activities
+## Hands-On Lab 5.4
 
-### Hands-On Lab 5.4
 - Bivariate Analysis
 - Scatter Plots
 - Grouped Box Plots
@@ -18,11 +17,11 @@ The goal of Day 5 is to perform advanced exploratory data analysis on the insura
 - Heatmap
 - Pairplot
 - Data Storytelling
-- Conclusion
 
-### Hands-On Lab 5.5
+## Hands-On Lab 5.5
+
 - Combined all EDA steps into one notebook.
-- Included dataset inspection, descriptive statistics, univariate analysis, outlier detection, categorical analysis, bivariate analysis, correlation analysis, and final conclusions.
+- Included dataset inspection, descriptive statistics, univariate analysis, outlier detection, categorical analysis, bivariate analysis, correlation analysis, and conclusion.
 
 ## Files
 
@@ -32,4 +31,4 @@ The goal of Day 5 is to perform advanced exploratory data analysis on the insura
 
 ## Result
 
-A complete exploratory data analysis was performed on the insurance dataset. The final notebook combines all analysis steps and provides visualizations and observations that help understand the data before building machine learning models.
+A complete exploratory data analysis was performed on the insurance dataset. The final notebook combines all EDA steps and summarizes the main insights before building machine learning models.
