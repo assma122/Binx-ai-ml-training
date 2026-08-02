@@ -37,7 +37,7 @@ The goal of this notebook is to understand the basics of supervised learning, di
 
 ## Files
 
-- `.ipynb`
+- `Day1_Supervised_Learning.ipynb`
 - `diabetes.csv`
 
 ## Result
