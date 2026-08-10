@@ -2,70 +2,48 @@
 
 ## Overview
 
-In this notebook, I learned how Cross-Validation can give a better idea about model performance compared with using only one validation split.
+In Day 1, I evaluated the model using one validation split.
 
-I used 5-fold cross-validation with Logistic Regression and compared the result with the single validation score from Day 1.
+In Day 2, I wanted to check if that result would stay similar when the model is evaluated on different parts of the data.
+
+I used **5-fold cross-validation** with Logistic Regression, compared it with the Day 1 score, and then used **StratifiedKFold** because stroke cases are rare in the dataset.
 
 ---
 
-## Topics Covered
+## What I Applied
 
-- K-Fold Cross-Validation
 - 5-Fold Cross-Validation
 - `cross_val_score`
-- Mean F1-score
-- Standard Deviation
+- Mean and Standard Deviation
+- F1-score
 - Single Split vs Cross-Validation
-- Stratified K-Fold
+- StratifiedKFold
 - Class Imbalance
 
 ---
 
-## Hands-On Lab
+## Main Results
 
-### Step 1
-Evaluated a Logistic Regression model using 5-fold cross-validation.
+| Method | F1-score | Std |
+|---|---:|---:|
+| Day 1 Single Split | 0.249 | - |
+| 5-Fold Cross-Validation | 0.234 | 0.024 |
+| Stratified 5-Fold CV | 0.228 | 0.012 |
 
-### Step 2
-Calculated the mean and standard deviation of the F1-scores across the five folds.
+The F1-scores across the five folds ranged from about **0.197 to 0.272**.
 
-### Step 3
-Compared the cross-validation result with the single validation score from Day 1.
-
-### Step 4
-Used StratifiedKFold to keep a similar class distribution in each fold because the stroke dataset is imbalanced.
+The stroke class represented only about **4.9%** of the data, so stratification was important to keep a similar class ratio in every fold.
 
 ---
 
-## Results
+## What I Learned
 
-- Cross-validation was evaluated using F1-score.
-- The results changed slightly across the five folds.
-- The single validation score from Day 1 was slightly higher than the cross-validation average.
-- StratifiedKFold helped keep the class distribution more balanced across folds.
+A single validation split can give a slightly different result depending on which samples are selected.
 
----
-
-## Final Stratified Cross-Validation Result
-
-- Mean F1-score: `0.228`
-- Standard Deviation: `0.012`
+Cross-validation gives a better overall view of model performance, while StratifiedKFold is especially useful here because the target is imbalanced.
 
 ---
 
-## Tools Used
+## Tools
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- Scikit-learn
-- Jupyter Notebook
-
----
-
-## Learning Outcome
-
-By the end of this notebook, I understood why using more than one validation split can give a better view of model performance.
-
-I also learned how the mean and standard deviation are used to understand the average performance and stability of the model across different folds.
+Python • Pandas • NumPy • Matplotlib • Scikit-learn • Jupyter Notebook
