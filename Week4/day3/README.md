@@ -8,22 +8,22 @@ The models are compared using training and validation F1-scores.
 
 ## Quick Navigation
 
-- [Underfitting and Overfitting](#31---underfitting-and-overfitting)
-- [Bias-Variance Trade-off](#32---bias-variance-trade-off)
-- [Diagnosing Model Fit](#33---how-to-diagnose-model-fit)
-- [Reducing Overfitting](#34---reducing-overfitting)
 - [Hands-On Lab](#hands-on-lab)
-- [Model Comparison](#step-4---final-diagnosis)
+- [Main Results](#main-results)
+- [Key Takeaway](#key-takeaway)
+- [Tools](#tools)
+
+➡️ [Open the Full Day 3 Notebook](Biase_variance.ipynb)
 
 ## Hands-On Lab
 
 The hands-on part includes:
 
-- [Step 1 - Create an Overfit Decision Tree](#step-1---deliberately-overfit-a-model)
-- [Step 2 - Create an Underfit Decision Tree](#step-2---deliberately-underfit-a-model)
-- [Step 3 - Reduce Tree Complexity](#step-3---reduce-model-complexity)
-- [Compare Different Tree Depths](#tree-depth-comparison)
-- [Step 4 - Compare the Final Models](#step-4---final-diagnosis)
+- Creating an overfit Decision Tree
+- Creating an underfit Decision Tree
+- Reducing tree complexity
+- Testing different tree depths
+- Comparing training and validation F1-scores
 
 ## Main Results
 
