@@ -13,8 +13,6 @@ The models are compared using training and validation F1-scores.
 - [Key Takeaway](#key-takeaway)
 - [Tools](#tools)
 
-➡️ [Open the Full Day 3 Notebook](Biase_variance.ipynb)
-
 ## Hands-On Lab
 
 The hands-on part includes:
@@ -27,11 +25,11 @@ The hands-on part includes:
 
 ## Main Results
 
-| Model    | Train F1 | Validation F1 |
-| -------- | -------: | ------------: |
-| Underfit |    0.000 |         0.000 |
-| Overfit  |    1.000 |         0.179 |
-| Depth 10 |    0.613 |         0.118 |
+| Model | Train F1 | Validation F1 |
+|---|---:|---:|
+| Underfit | 0.000 | 0.000 |
+| Overfit | 1.000 | 0.179 |
+| Depth 10 | 0.613 | 0.118 |
 
 ## Key Takeaway
 
