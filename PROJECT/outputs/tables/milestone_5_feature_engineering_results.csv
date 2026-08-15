@@ -1,0 +1,4 @@
+Version,Accuracy,Precision,Recall,F1-score
+Baseline Logistic Regression,0.869,0.812,0.929,0.867
+Pipeline V1 - thalach_age_ratio,0.869,0.812,0.929,0.867
+Pipeline V2 - thalach_age_ratio + age_oldpeak_interaction,0.869,0.812,0.929,0.867

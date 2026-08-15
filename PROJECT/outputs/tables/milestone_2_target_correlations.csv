@@ -1,0 +1,14 @@
+Feature,Correlation_with_Target
+thalach,-0.417167
+fbs,0.025264
+chol,0.085164
+trestbps,0.150825
+restecg,0.169202
+age,0.22312
+sex,0.276816
+slope,0.339213
+cp,0.414446
+oldpeak,0.42451
+exang,0.431894
+ca,0.460033
+thal,0.515894

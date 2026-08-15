@@ -1,0 +1,6 @@
+Feature,Mean,Median,Std
+age,54.44,56.0,9.04
+trestbps,131.69,130.0,17.6
+chol,246.69,241.0,51.78
+thalach,149.61,153.0,22.88
+oldpeak,1.04,0.8,1.16
