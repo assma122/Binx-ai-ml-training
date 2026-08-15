@@ -1,0 +1,4 @@
+Model,Mean CV F1-score
+Logistic Regression,0.806
+Random Forest,0.775
+Tuned Random Forest,0.799

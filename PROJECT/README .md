@@ -12,6 +12,9 @@ The project focuses on:
 - supervised classification
 - model comparison
 - cross-validation
+- Random Forest depth analysis
+- feature importance analysis
+- hyperparameter tuning
 - feature engineering
 - reusable Scikit-learn pipelines
 - final model evaluation
@@ -58,17 +61,21 @@ The dataset was checked for missing values, duplicate rows, coded categorical va
 - Trained Logistic Regression as the baseline model
 - Applied StandardScaler
 - Evaluated Accuracy, Precision, Recall, and F1-score
-- Reviewed the confusion matrix
+- Reviewed the confusion matrix and classification report
 
 ### Milestone 4 — Model Comparison & Evaluation
 - Trained Random Forest as the comparison model
 - Compared both models using the same test split
+- Tested different Random Forest tree depths using a validation split
+- Reviewed Random Forest feature importance
 - Applied 5-fold Stratified Cross-Validation
 - Compared fold-by-fold F1-scores
 - Reviewed the Random Forest confusion matrix
+- Applied GridSearchCV for hyperparameter tuning
 - Added ROC Curve and ROC-AUC evaluation
 
 ### Milestone 5 — Feature Engineering & Pipeline
+
 Two engineered features were tested:
 
 - `thalach_age_ratio = thalach / age`
@@ -86,6 +93,7 @@ The engineered features did not improve the test performance, but the Pipeline m
 |---|---:|---:|---:|---:|---:|
 | Logistic Regression | 0.869 | 0.812 | 0.929 | 0.867 | 0.953 |
 | Random Forest | 0.885 | 0.839 | 0.929 | 0.881 | 0.954 |
+| **Tuned Random Forest** | **0.902** | **0.844** | **0.964** | **0.900** | — |
 | Pipeline V1 | 0.869 | 0.812 | 0.929 | 0.867 | — |
 | Pipeline V2 | 0.869 | 0.812 | 0.929 | 0.867 | — |
 
@@ -93,10 +101,21 @@ The engineered features did not improve the test performance, but the Pipeline m
 
 - Logistic Regression mean F1-score: **0.806**
 - Random Forest mean F1-score: **0.775**
+- Tuned Random Forest best CV F1-score: **0.799**
+
+### Hyperparameter Tuning
+
+GridSearchCV selected:
+
+- `max_depth = 7`
+- `min_samples_split = 2`
+- `n_estimators = 200`
 
 ### Main Result
 
-Random Forest achieved the strongest held-out test performance, while Logistic Regression showed stronger average performance across the cross-validation folds.
+The Tuned Random Forest achieved the strongest held-out test performance with an F1-score of **0.900** and recall of **0.964**.
+
+Logistic Regression remained slightly stronger in average cross-validation performance, with a mean F1-score of **0.806** compared with **0.799** for the Tuned Random Forest.
 
 ## Key Findings
 
@@ -104,8 +123,12 @@ Random Forest achieved the strongest held-out test performance, while Logistic R
 - Heart disease cases represented about **45.9%** of the dataset.
 - `thal` and `ca` showed the strongest positive correlations with the target.
 - `thalach` showed the strongest negative correlation with the target.
-- Random Forest achieved the highest test F1-score at **0.881**.
-- Both models achieved very high ROC-AUC scores.
+- Random Forest feature importance highlighted `thalach`, `cp`, and `thal` among the most influential features.
+- Deeper Random Forest trees showed a larger gap between training and validation performance, suggesting overfitting.
+- Hyperparameter tuning improved the Random Forest mean CV F1-score from **0.775** to **0.799**.
+- The Tuned Random Forest achieved the highest test F1-score at **0.900**.
+- Logistic Regression achieved the highest mean cross-validation F1-score at **0.806**.
+- Both original models achieved very high ROC-AUC scores.
 - The engineered features did not improve Logistic Regression performance.
 - The Pipeline improved workflow consistency even when performance stayed the same.
 
@@ -128,46 +151,3 @@ Cardiac-Patient-Monitoring-System/
 │
 ├── README.md
 └── requirements.txt
-```
-
-## How to Run
-
-1. Clone or download the project repository.
-2. Open the project folder in Jupyter Notebook or VS Code.
-3. Install the required packages:
-
-```bash
-pip install -r requirements.txt
-```
-
-4. Open the main notebook.
-5. Restart the kernel.
-6. Run all cells from top to bottom.
-
-The notebook uses relative paths, so keep the project folders organized as shown above.
-
-## Requirements
-
-The project uses:
-- Python
-- NumPy
-- Pandas
-- Matplotlib
-- Scikit-learn
-- Jupyter
-
-Exact package requirements are listed in `requirements.txt`.
-
-## Limitations
-
-- The dataset contains only 303 patient records.
-- Results may change with a larger dataset or a different train/test split.
-- The analysis is limited to the features available in the selected dataset.
-- The engineered features tested in this project did not improve final performance.
-- The project is intended for educational machine-learning analysis and not for clinical use.
-
-## Final Takeaway
-
-This project follows a complete supervised machine-learning workflow from data understanding to final evaluation.
-
-The strongest test-set result came from Random Forest, while Logistic Regression showed better average cross-validation performance. The project also demonstrates that good model evaluation should rely on multiple metrics, not only one score or one split.
