@@ -1,0 +1,33 @@
+{
+  "project": "CineSense",
+  "task": "binary_sentiment_classification",
+  "positive_class": "positive",
+  "evaluation_set": {
+    "name": "stratified_test_set",
+    "records": 9917,
+    "test_size": 0.2,
+    "random_state": 42
+  },
+  "acceptance_benchmark": {
+    "accuracy_minimum": 0.85,
+    "f1_score_minimum": 0.85
+  },
+  "metrics": {
+    "accuracy": 0.8862,
+    "precision": 0.8776,
+    "recall": 0.8985,
+    "f1_score": 0.8879
+  },
+  "confusion_matrix": {
+    "labels": ["negative", "positive"],
+    "true_negative": 4316,
+    "false_positive": 624,
+    "false_negative": 505,
+    "true_positive": 4472,
+    "matrix": [
+      [4316, 624],
+      [505, 4472]
+    ]
+  },
+  "benchmark_met": true
+}
